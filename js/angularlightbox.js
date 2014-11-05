@@ -97,7 +97,7 @@
                         variables.m_img.width = img.width;
                         create.calcDimentions(variables.m_img, function(height, width){
                             if(variables.img){
-                             variables.img.remove();
+                             variables.wrapper.removeChild(variables.img);
                             }
                             variables.img = img;
                             create.resizeLightbox(height, width);
