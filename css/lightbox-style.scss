@@ -1,0 +1,75 @@
+.lightbox-shadow{
+	height:100%;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	background:rgba(0, 0, 0, 0.8);
+	overflow:hidden;
+	z-index: 1001;
+}
+.lightbox-fade{
+	opacity:0;
+	transition: opacity .5s ease-in-out;
+   	-moz-transition: opacity .5s ease-in-out;
+   	-webkit-transition: opacity .5s ease-in-out;
+   	-o-transition: opacity .5s ease-in-out;
+}
+.lightbox-fade.open{
+	opacity:1;
+}
+.lightbox-box{
+	margin:15px auto 0 auto;
+	overflow:auto;
+	padding:0;
+	border:0;
+	background:#FFF;
+}
+.lightbox-wrapper{
+	margin:15px;
+	position:relative;
+}
+.lightbox-wrapper:after{
+	clear:both;
+}
+.lightbox-full-block{
+	margin:0;
+	padding:0;
+	border:0;
+}
+body.lightbox-full-block{
+	min-height:100%;
+	min-width:100%;
+}
+html.lightbox-full-block{
+	height:100%;
+	width:100%;
+}
+.lightbox-box img{
+	margin:0;
+	border:0;
+	padding:0;
+	display:block;
+}
+.lightbox-next{
+	right:0;
+	margin: 0;
+	padding:0;
+	border:0;
+	display:block;
+	height:100%;
+	width:50%;
+	cursor:pointer;
+	position:absolute;
+}
+.lightbox-prev{
+	left:0;
+	margin: 0;
+	padding:0;
+	border:0;
+	display:block;
+	height:100%;
+	width:50%;
+	cursor:pointer;
+	position:absolute;
+}
