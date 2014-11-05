@@ -1,0 +1,4 @@
+angularlightbox
+===============
+
+Angularjs lightbox
