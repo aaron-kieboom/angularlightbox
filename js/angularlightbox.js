@@ -89,19 +89,22 @@
                 };
 
                 create.loadImage = function(path){
-                    if(!variables.img){
-                        variables.img = new Image();
-                        variables.m_img = new Image();
-                    }else{
-                        variables.lightbox.setAttribute('class', variables.lightbox.getAttribute('class').replace(' open', ''));
-                    }
-                    variables.img.src = path;
-                    variables.m_img.src = path;
-                    variables.img.onload = function(){
+                    var img = new Image();
+                    variables.m_img = {};
+                    img.src = path;
+                    img.onload = function(){
+                        variables.m_img.height = img.height;
+                        variables.m_img.width = img.width;
                         create.calcDimentions(variables.m_img, function(height, width){
+                            if(variables.img){
+                             variables.img.remove();
+                            }
+                            variables.img = img;
                             create.resizeLightbox(height, width);
                             variables.wrapper.appendChild(variables.img);
-                            variables.lightbox.setAttribute('class', variables.lightbox.getAttribute('class') + ' open');
+                            if(variables.lightbox.getAttribute('class').indexOf(' open') === -1){
+                                variables.lightbox.setAttribute('class', variables.lightbox.getAttribute('class') + ' open');
+                            }
                         });
                     };
                 };
