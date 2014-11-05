@@ -6,6 +6,7 @@
 	left:0;
 	background:rgba(0, 0, 0, 0.8);
 	overflow:hidden;
+	z-index: 1001;
 }
 .lightbox-fade{
 	opacity:0;
